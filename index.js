@@ -23,11 +23,11 @@ app.use('/api/v1/resume', require('./routes/adminRoute'))
 
 
 
-// app.use(express.static(path.join(__dirname, "dist")))
+app.use(express.static(path.join(__dirname, "dist")))
 
-// app.use("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "dist", "index.html"))
-// })
+app.use("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "dist", "index.html"))
+})
 
 
 
